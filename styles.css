@@ -1,0 +1,484 @@
+
+/* Farbthema: Dunkles Weihnachtsfarbschema */
+        :root {
+            /* Realistischer tiefer Nachthimmel */
+background: linear-gradient(to bottom, #000000, #0a0e27, #1b2845);
+
+/* Oder noch dramatischer */
+background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+            --green-soft: #1c3b2d;
+            --gold: #d4af37;
+            --red-wine: #5a0f1b;
+            --cream: #f7f3e9;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Lato", sans-serif;
+            color: var(--cream);
+            background: var(--green-dark);
+        }
+
+        /* Hero-Bereich */
+        .hero {
+            position: relative;
+            height: auto;
+            background: url('https://images.unsplash.com/photo-1544207240-9feb3edaa68b?q=80')
+                center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at top, rgba(27, 39, 53, 0.7) 0%, rgba(9, 10, 15, 0.9) 100%);
+            opacity: 0.85;
+            top: 0;
+            left: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            color: var(--cream);
+            max-width: 700px;
+            padding: 10px;
+        }
+
+        .logo {
+    width: 100%;
+    max-width: 100%;
+    height: 100px;
+    margin-bottom: 30;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+    object-fit: contain;
+    object-position: center center;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        height: 70px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .logo {
+        height: 80px;
+    }
+}
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            color: goldenrod;
+            font-weight: 700;
+            font-family: "Lato", sans-serif;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            font-weight: 300;
+            font-family: "Lato", sans-serif;
+        }
+
+        /* Sektionen */
+        .section {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: auto;
+            background: var(--green-soft);
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+        .section {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+        .section {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+        .section h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 2rem;
+            color:goldenrod;
+            font-weight: 700;
+            font-family: "Lato", sans-serif;
+        }
+        .section h3 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            font-family: "Lato", sans-serif;
+            font-style: italic;
+        }
+
+        .section p {
+            line-height: 1.7;
+            color: var(--cream);
+            font-weight: 300;
+            font-family: "Lato", sans-serif;
+            text-align: center;
+        }
+
+        .highlight {
+            background: var(--red-wine);
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+        }
+        .highlight2 {
+            background: var(--green-soft);
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .goals {
+            list-style: none;
+            padding: 0;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .goals li {
+            margin: 10px 0;
+            color: var(--cream);
+            font-weight: 400;
+            font-family: "Lato", sans-serif;
+        }
+
+        /* Statische Sterne mit Aufleuchten */
+        .stars, .stars2, .stars3 {
+    z-index: 1;
+}
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 1px;
+            pointer-events: none;
+            background: transparent;
+            box-shadow:
+                100px 50px #fff, 200px 80px #fff, 300px 120px #fff, 400px 90px #fff, 500px 60px #fff,
+                600px 110px #fff, 700px 70px #fff, 800px 100px #fff, 900px 85px #fff, 1000px 95px #fff,
+                1100px 55px #fff, 1200px 130px #fff, 1300px 75px #fff, 1400px 105px #fff, 1500px 65px #fff,
+                50px 140px #fff, 150px 160px #fff, 250px 150px #fff, 350px 180px #fff, 450px 170px #fff,
+                550px 145px #fff, 650px 185px #fff, 750px 155px #fff, 850px 175px #fff, 950px 165px #fff,
+                120px 250px #fff, 220px 280px #fff, 320px 260px #fff, 420px 290px #fff, 520px 270px #fff,
+                620px 255px #fff, 720px 285px #fff, 820px 265px #fff, 920px 275px #fff, 1020px 295px #fff,
+                1120px 250px #fff, 1220px 280px #fff, 1320px 260px #fff, 1420px 290px #fff,
+                80px 350px #fff, 180px 380px #fff, 280px 360px #fff, 380px 390px #fff, 480px 370px #fff,
+                580px 355px #fff, 680px 385px #fff, 780px 365px #fff, 880px 375px #fff, 980px 395px #fff,
+                140px 450px #fff, 240px 480px #fff, 340px 460px #fff, 440px 490px #fff, 540px 470px #fff,
+                640px 455px #fff, 740px 485px #fff, 840px 465px #fff, 940px 475px #fff, 1040px 495px #fff,
+                100px 550px #fff, 200px 580px #fff, 300px 560px #fff, 400px 590px #fff, 500px 570px #fff,
+                600px 555px #fff, 700px 585px #fff, 800px 565px #fff, 900px 575px #fff, 1000px 595px #fff,
+                1100px 450px #fff, 1200px 350px #fff, 1300px 550px #fff, 1400px 480px #fff, 1500px 380px #fff,
+                60px 200px #fff, 160px 420px #fff, 260px 520px #fff, 360px 220px #fff, 460px 320px #fff;
+           animation:
+        star-glow 1s infinite ease-in-out,
+        star-sparkle 3.5s infinite ease-in-out;
+            filter: blur(0.3px);
+        }
+ 
+        .stars::after {
+            content: " ";
+            position: absolute;
+            top: 0;
+            width: 1px;
+            height: 1px;
+            background: transparent;
+            box-shadow:
+                1600px 100px #fff, 1700px 200px #fff, 1800px 150px #fff, 1900px 250px #fff,
+                1600px 350px #fff, 1700px 450px #fff, 1800px 400px #fff, 1900px 500px #fff,
+                1650px 120px #fff, 1750px 320px #fff, 1850px 220px #fff, 1950px 420px #fff;
+        }
+ 
+        .stars2 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 2px;
+            pointer-events: none;
+            background: transparent;
+            box-shadow:
+                150px 70px #fff, 250px 110px #fff, 350px 90px #fff, 450px 130px #fff, 550px 100px #fff,
+                650px 140px #fff, 750px 80px #fff, 850px 120px #fff, 950px 95px #fff, 1050px 115px #fff,
+                1150px 85px #fff, 1250px 125px #fff, 1350px 105px #fff, 1450px 135px #fff,
+                200px 240px #fff, 300px 270px #fff, 400px 250px #fff, 500px 280px #fff, 600px 260px #fff,
+                700px 245px #fff, 800px 275px #fff, 900px 255px #fff, 1000px 265px #fff, 1100px 285px #fff,
+                1200px 240px #fff, 1300px 270px #fff, 1400px 250px #fff,
+                130px 340px #fff, 230px 370px #fff, 330px 350px #fff, 430px 380px #fff, 530px 360px #fff,
+                630px 345px #fff, 730px 375px #fff, 830px 355px #fff, 930px 365px #fff, 1030px 385px #fff,
+                170px 440px #fff, 270px 470px #fff, 370px 450px #fff, 470px 480px #fff, 570px 460px #fff,
+                670px 445px #fff, 770px 475px #fff, 870px 455px #fff, 970px 465px #fff, 1070px 485px #fff,
+                120px 540px #fff, 220px 570px #fff, 320px 550px #fff, 420px 580px #fff, 520px 560px #fff,
+                620px 545px #fff, 720px 575px #fff, 820px 555px #fff, 920px 565px #fff, 1020px 585px #fff,
+                1130px 460px #fff, 1230px 360px #fff, 1330px 540px #fff, 1430px 470px #fff,
+                90px 210px #fff, 190px 410px #fff, 290px 510px #fff, 390px 230px #fff;
+            animation:
+        star-glow 6s infinite ease-in-out,
+        star-sparkle 3.5s infinite ease-in-out;
+            filter: blur(0.4px);
+        }
+ 
+        .stars2::after {
+            content: " ";
+            position: absolute;
+            top: 0;
+            width: 2px;
+            height: 2px;
+            background: transparent;
+            box-shadow:
+                1620px 110px #fff, 1720px 210px #fff, 1820px 160px #fff, 1920px 260px #fff,
+                1620px 360px #fff, 1720px 460px #fff, 1820px 410px #fff, 1920px 510px #fff,
+                1670px 130px #fff, 1770px 330px #fff, 1870px 230px #fff, 1970px 430px #fff;
+        }
+ 
+        .stars3 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 3px;
+            pointer-events: none;
+            background: transparent;
+            box-shadow:
+                180px 60px #fff, 280px 100px #fff, 380px 80px #fff, 480px 120px #fff, 580px 90px #fff,
+                680px 130px #fff, 780px 70px #fff, 880px 110px #fff, 980px 85px #fff, 1080px 105px #fff,
+                1180px 75px #fff, 1280px 115px #fff, 1380px 95px #fff,
+                210px 230px #fff, 310px 260px #fff, 410px 240px #fff, 510px 270px #fff, 610px 250px #fff,
+                710px 235px #fff, 810px 265px #fff, 910px 245px #fff, 1010px 255px #fff, 1110px 275px #fff,
+                1210px 230px #fff, 1310px 260px #fff,
+                160px 330px #fff, 260px 360px #fff, 360px 340px #fff, 460px 370px #fff, 560px 350px #fff,
+                660px 335px #fff, 760px 365px #fff, 860px 345px #fff, 960px 355px #fff, 1060px 375px #fff,
+                190px 430px #fff, 290px 460px #fff, 390px 440px #fff, 490px 470px #fff, 590px 450px #fff,
+                690px 435px #fff, 790px 465px #fff, 890px 445px #fff, 990px 455px #fff, 1090px 475px #fff,
+                140px 530px #fff, 240px 560px #fff, 340px 540px #fff, 440px 570px #fff, 540px 550px #fff,
+                640px 535px #fff, 740px 565px #fff, 840px 545px #fff, 940px 555px #fff, 1040px 575px #fff,
+                1150px 450px #fff, 1250px 350px #fff, 1350px 530px #fff, 1450px 460px #fff,
+                110px 200px #fff, 210px 400px #fff, 310px 500px #fff, 410px 220px #fff;
+            animation:
+        star-glow 6s infinite ease-in-out,
+        star-sparkle 3.5s infinite ease-in-out;
+            filter: blur(0.5px);
+        }
+ 
+        .stars3::after {
+            content: " ";
+            position: absolute;
+            top: 0;
+            width: 3px;
+            height: 3px;
+            background: transparent;
+            box-shadow:
+                1640px 120px #fff, 1740px 220px #fff, 1840px 170px #fff, 1940px 270px #fff,
+                1640px 370px #fff, 1740px 470px #fff, 1840px 420px #fff, 1940px 520px #fff,
+                1690px 140px #fff, 1790px 340px #fff, 1890px 240px #fff, 1990px 440px #fff;
+        }
+        /* Stern-Glow Effekt - nur Aufleuchten, keine Bewegung */
+        @keyframes star-glow {
+            0%, 100% {
+                opacity: 0.5;
+                filter: blur(0.7px) drop-shadow(0 0 4px #fff) drop-shadow(0 0 6px #fff);
+            }
+            25% {
+                opacity: 0.9;
+                filter: blur(0.8px) drop-shadow(0 0 8px #fff) drop-shadow(0 0 12px #fff) drop-shadow(0 0 16px rgba(255,255,255,0.8));
+            }
+            50% {
+                opacity: 1;
+                filter: blur(1.0px) drop-shadow(0 1 px #fff) drop-shadow(0 0 16px #fff) drop-shadow(0 0 24px rgba(255,255,255,0.9)) drop-shadow(0 0 32px rgba(255,255,255,0.6));
+            }
+            75% {
+                opacity: 0.9;
+                filter: blur(0.8px) drop-shadow(0 0 8px #fff) drop-shadow(0 0 12px #fff) drop-shadow(0 0 16px rgba(255,255,255,0.8));
+            }
+        }
+/* Statische Sterne mit Aufleuchten */
+        .stars, .stars2, .stars3 {
+    z-index: 1;
+}
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 1px;
+            pointer-events: none;
+            background: transparent;
+            box-shadow:
+                100px 50px #fff, 200px 80px #fff, 300px 120px #fff, 400px 90px #fff, 500px 60px #fff,
+                600px 110px #fff, 700px 70px #fff, 800px 100px #fff, 900px 85px #fff, 1000px 95px #fff,
+                1100px 55px #fff, 1200px 130px #fff, 1300px 75px #fff, 1400px 105px #fff, 1500px 65px #fff,
+                50px 140px #fff, 150px 160px #fff, 250px 150px #fff, 350px 180px #fff, 450px 170px #fff,
+                550px 145px #fff, 650px 185px #fff, 750px 155px #fff, 850px 175px #fff, 950px 165px #fff,
+                120px 250px #fff, 220px 280px #fff, 320px 260px #fff, 420px 290px #fff, 520px 270px #fff,
+                620px 255px #fff, 720px 285px #fff, 820px 265px #fff, 920px 275px #fff, 1020px 295px #fff,
+                1120px 250px #fff, 1220px 280px #fff, 1320px 260px #fff, 1420px 290px #fff,
+                80px 350px #fff, 180px 380px #fff, 280px 360px #fff, 380px 390px #fff, 480px 370px #fff,
+                580px 355px #fff, 680px 385px #fff, 780px 365px #fff, 880px 375px #fff, 980px 395px #fff,
+                140px 450px #fff, 240px 480px #fff, 340px 460px #fff, 440px 490px #fff, 540px 470px #fff,
+                640px 455px #fff, 740px 485px #fff, 840px 465px #fff, 940px 475px #fff, 1040px 495px #fff,
+                100px 550px #fff, 200px 580px #fff, 300px 560px #fff, 400px 590px #fff, 500px 570px #fff,
+                600px 555px #fff, 700px 585px #fff, 800px 565px #fff, 900px 575px #fff, 1000px 595px #fff,
+                1100px 450px #fff, 1200px 350px #fff, 1300px 550px #fff, 1400px 480px #fff, 1500px 380px #fff,
+                60px 200px #fff, 160px 420px #fff, 260px 520px #fff, 360px 220px #fff, 460px 320px #fff;
+           animation:
+        star-glow 1s infinite ease-in-out,
+        star-sparkle 3.5s infinite ease-in-out;
+            filter: blur(0.3px);
+        }
+ 
+        .stars::after {
+            content: " ";
+            position: absolute;
+            top: 0;
+            width: 1px;
+            height: 1px;
+            background: transparent;
+            box-shadow:
+                1600px 100px #fff, 1700px 200px #fff, 1800px 150px #fff, 1900px 250px #fff,
+                1600px 350px #fff, 1700px 450px #fff, 1800px 400px #fff, 1900px 500px #fff,
+                1650px 120px #fff, 1750px 320px #fff, 1850px 220px #fff, 1950px 420px #fff;
+        }
+ 
+        .stars2 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 2px;
+            pointer-events: none;
+            background: transparent;
+            box-shadow:
+                150px 70px #fff, 250px 110px #fff, 350px 90px #fff, 450px 130px #fff, 550px 100px #fff,
+                650px 140px #fff, 750px 80px #fff, 850px 120px #fff, 950px 95px #fff, 1050px 115px #fff,
+                1150px 85px #fff, 1250px 125px #fff, 1350px 105px #fff, 1450px 135px #fff,
+                200px 240px #fff, 300px 270px #fff, 400px 250px #fff, 500px 280px #fff, 600px 260px #fff,
+                700px 245px #fff, 800px 275px #fff, 900px 255px #fff, 1000px 265px #fff, 1100px 285px #fff,
+                1200px 240px #fff, 1300px 270px #fff, 1400px 250px #fff,
+                130px 340px #fff, 230px 370px #fff, 330px 350px #fff, 430px 380px #fff, 530px 360px #fff,
+                630px 345px #fff, 730px 375px #fff, 830px 355px #fff, 930px 365px #fff, 1030px 385px #fff,
+                170px 440px #fff, 270px 470px #fff, 370px 450px #fff, 470px 480px #fff, 570px 460px #fff,
+                670px 445px #fff, 770px 475px #fff, 870px 455px #fff, 970px 465px #fff, 1070px 485px #fff,
+                120px 540px #fff, 220px 570px #fff, 320px 550px #fff, 420px 580px #fff, 520px 560px #fff,
+                620px 545px #fff, 720px 575px #fff, 820px 555px #fff, 920px 565px #fff, 1020px 585px #fff,
+                1130px 460px #fff, 1230px 360px #fff, 1330px 540px #fff, 1430px 470px #fff,
+                90px 210px #fff, 190px 410px #fff, 290px 510px #fff, 390px 230px #fff;
+            animation:
+        star-glow 6s infinite ease-in-out,
+        star-sparkle 3.5s infinite ease-in-out;
+            filter: blur(0.4px);
+        }
+ 
+        .stars2::after {
+            content: " ";
+            position: absolute;
+            top: 0;
+            width: 2px;
+            height: 2px;
+            background: transparent;
+            box-shadow:
+                1620px 110px #fff, 1720px 210px #fff, 1820px 160px #fff, 1920px 260px #fff,
+                1620px 360px #fff, 1720px 460px #fff, 1820px 410px #fff, 1920px 510px #fff,
+                1670px 130px #fff, 1770px 330px #fff, 1870px 230px #fff, 1970px 430px #fff;
+        }
+ 
+        .stars3 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 3px;
+            pointer-events: none;
+            background: transparent;
+            box-shadow:
+                180px 60px #fff, 280px 100px #fff, 380px 80px #fff, 480px 120px #fff, 580px 90px #fff,
+                680px 130px #fff, 780px 70px #fff, 880px 110px #fff, 980px 85px #fff, 1080px 105px #fff,
+                1180px 75px #fff, 1280px 115px #fff, 1380px 95px #fff,
+                210px 230px #fff, 310px 260px #fff, 410px 240px #fff, 510px 270px #fff, 610px 250px #fff,
+                710px 235px #fff, 810px 265px #fff, 910px 245px #fff, 1010px 255px #fff, 1110px 275px #fff,
+                1210px 230px #fff, 1310px 260px #fff,
+                160px 330px #fff, 260px 360px #fff, 360px 340px #fff, 460px 370px #fff, 560px 350px #fff,
+                660px 335px #fff, 760px 365px #fff, 860px 345px #fff, 960px 355px #fff, 1060px 375px #fff,
+                190px 430px #fff, 290px 460px #fff, 390px 440px #fff, 490px 470px #fff, 590px 450px #fff,
+                690px 435px #fff, 790px 465px #fff, 890px 445px #fff, 990px 455px #fff, 1090px 475px #fff,
+                140px 530px #fff, 240px 560px #fff, 340px 540px #fff, 440px 570px #fff, 540px 550px #fff,
+                640px 535px #fff, 740px 565px #fff, 840px 545px #fff, 940px 555px #fff, 1040px 575px #fff,
+                1150px 450px #fff, 1250px 350px #fff, 1350px 530px #fff, 1450px 460px #fff,
+                110px 200px #fff, 210px 400px #fff, 310px 500px #fff, 410px 220px #fff;
+            animation:
+        star-glow 3s infinite ease-in-out,
+        star-sparkle 1s infinite ease-in-out;
+            filter: blur(0.5px);
+        }
+ 
+        .stars3::after {
+            content: " ";
+            position: absolute;
+            top: 0;
+            width: 3px;
+            height: 3px;
+            background: transparent;
+            box-shadow:
+                1640px 120px #fff, 1740px 220px #fff, 1840px 170px #fff, 1940px 270px #fff,
+                1640px 370px #fff, 1740px 470px #fff, 1840px 420px #fff, 1940px 520px #fff,
+                1690px 140px #fff, 1790px 340px #fff, 1890px 240px #fff, 1990px 440px #fff;
+        }
+        /* Stern-Glow Effekt - nur Aufleuchten, keine Bewegung */
+        @keyframes star-glow {
+            0%, 100% {
+                opacity: 0.5;
+                filter: blur(0.7px) drop-shadow(0 0 4px #fff) drop-shadow(0 0 6px #fff);
+            }
+            25% {
+                opacity: 0.9;
+                filter: blur(0.8px) drop-shadow(0 0 8px #fff) drop-shadow(0 0 12px #fff) drop-shadow(0 0 16px rgba(255,255,255,0.8));
+            }
+            50% {
+                opacity: 1;
+                filter: blur(1.0px) drop-shadow(0 1 px #fff) drop-shadow(0 0 16px #fff) drop-shadow(0 0 24px rgba(255,255,255,0.9)) drop-shadow(0 0 32px rgba(255,255,255,0.6));
+            }
+            75% {
+                opacity: 0.9;
+                filter: blur(0.8px) drop-shadow(0 0 8px #fff) drop-shadow(0 0 12px #fff) drop-shadow(0 0 16px rgba(255,255,255,0.8));
+            }
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--green-dark);
+            color: #FF5A00;
+            margin-top: 30px;
+            font-weight: 300;
+            font-family: "Lato", sans-serif;
+        }
+
+/* Spruch Bild */
+.spruch {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}   

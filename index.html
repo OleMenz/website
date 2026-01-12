@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frohes Neues Jahr – Move Tageszentrum</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/Wonderia.otf">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+    <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <img src="MOVE Tageszentrum orange.png" alt="Move Tageszentrum Logo" class="logo">
+            <h1>Der Digital & Design Kurs wünscht frohe Festtage<br>& ein frohes neues Jahr!</h1>
+            <p>Wir bedanken uns für ein wertvolles Jahr und freuen uns auf alles, was kommt.</p>
+        </div>
+    </header>
+    <section id="text" class="section highlight2">
+        <h2>Unsere Neujahrsbotschaft</h2>
+        <p>
+            Ein langes Jahr liegt hinter uns – wie jedes andere auch
+Und genau deshalb möchten wir euch das Übliche wünschen, aber von Herzen.
+Ein riesiges Dankeschön an euch alle, die ihr Teil unseres Jahres wart, uns begleitet, unterstützt, motiviert und manchmal auch einfach ausgehalten habt. Danke, dass ihr da wart – mit Geduld, Humor und offenen Ohren.
+Wir wünschen euch ein wundervolles neues Jahr und viel Erfolg für 2026.
+Und wir wünschen uns (ganz uneigennützig), dass es im kommenden Jahr noch mehr Therapieplätze für alle gibt!
+Ausserdem hoffen wir, in unserer Berufswahl weiterzukommen, herauszufinden, was uns wirklich Freude macht, und den nächsten Schritt in unserer Entwicklung zu gehen. Wir hoffen sehr, auch im nächsten Jahr wieder mit vielen von euch zusammenarbeiten zu dürfen.
+Und natürlich hoffen wir, dass ihr im kommenden Jahr nicht von einem gigantischen Seemonster verschlungen werdet, das euch in die dunklen Tiefen des Meeres zieht – dorthin, wo kein Licht mehr hinkommt und sich nicht einmal mutige Taucher*innen hinunterwagen würden.
+        </p>
+        <p>Falls doch: Bitte vorher Bescheid sagen.</p>
+        <p>Herzliche Grüsse</p>
+        <h3>Ole, Conor, Sam, Gina, Adrian, Simon</h3>
+    </section>
+    <section class="section highlight">
+        <h2>Ausblick auf 2026</h2>
+        <ul class="goals">
+<li>✨ Erweiterung der Angebote und Programme</li>
+<li>✨ Eine wirklich gemeinschaftliche Gemeinschaft (ja, doppelt hält besser)</li>
+<li>✨ Umsetzung neuer kreativer Projekte</li>
+Danke für alles – wir freuen uns auf das, was kommt! 💫
+        </ul>
+    </section>
+    <section class="section highlight">
+        <img src="spruch.png" alt="SpruchNeujahr" class="spruch">
+    </section>
+    <section id="message" class="section"></section>
+    <div>
+    <!-- Neujahr Countdown - Einfach in deine HTML-Seite einfügen -->
+<div id="neujahr-countdown" style="text-align: center; padding: 40px; border-radius: 15px; color: white; margin: 20px 0;">
+    <h2 style="font-size: 2.5em; margin-bottom: 20px;">🎆 Countdown bis Neujahr 2026 🎆</h2>
+    
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 30px 0;">
+        <div style="background: rgba(255,255,255,0.2); padding: 25px; border-radius: 10px; min-width: 100px;">
+            <div id="days" style="font-size: 3em; font-weight: bold;">00</div>
+            <div style="font-size: 1em; margin-top: 5px;">Tage</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.2); padding: 25px; border-radius: 10px; min-width: 100px;">
+            <div id="hours" style="font-size: 3em; font-weight: bold;">00</div>
+            <div style="font-size: 1em; margin-top: 5px;">Stunden</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.2); padding: 25px; border-radius: 10px; min-width: 100px;">
+            <div id="minutes" style="font-size: 3em; font-weight: bold;">00</div>
+            <div style="font-size: 1em; margin-top: 5px;">Minuten</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.2); padding: 25px; border-radius: 10px; min-width: 100px;">
+            <div id="seconds" style="font-size: 3em; font-weight: bold;">00</div>
+            <div style="font-size: 1em; margin-top: 5px;">Sekunden</div>
+        </div>
+    </div>
+    
+    
+</div>
+
+<script>
+function updateCountdown() {
+    const now = new Date();
+    const newYear = new Date(now.getFullYear() + 1, 0, 1, 0, 0, 0);
+    const diff = newYear - now;
+    
+    if (diff <= 0) {
+        document.getElementById('neujahr-countdown').innerHTML = 
+            '<h2 style="font-size: 3em;">🎊 Frohes Neues Jahr 2026! 🎊</h2>';
+        return;
+    }
+    
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    
+    document.getElementById('days').textContent = String(days).padStart(2, '0');
+    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    
+if (days === 0) {
+        document.getElementById('message').innerHTML = '<h2>🎉 Heute ist Silvester! 🎉</h2>';
+    } else if (days === 1) {
+        document.getElementById('message').innerHTML = '<h2>⏰ Morgen ist schon Neujahr!</h2>';
+    } else {
+        document.getElementById('message').innerHTML = `<h2>Noch ${days} Tag${days !== 1 ? 'e' : ''} bis zum neuen Jahr...</h2>`;
+    }
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+    </div>
+    <footer>
+        <img src="Startagain_Festtage.png" alt="StartAgainLogo" class="logo">
+        <p>© 2026 Digital & Design – Frohes Neues Jahr!</p>
+    </footer>
+</body>
+</html>
